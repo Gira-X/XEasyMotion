@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC1740681D168C2C0016B1B3 /* XEasyMotionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1740671D168C2C0016B1B3 /* XEasyMotionUITests.swift */; };
-		FC17406A1D168CB10016B1B3 /* XEasyMotionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1740691D168CB10016B1B3 /* XEasyMotionTests.swift */; };
 		FC1BB5641D1996B300539FF0 /* NineBlockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1BB5631D1996B300539FF0 /* NineBlockMode.swift */; };
 		FC1EE6ED1CF888B500ABC6A6 /* GradView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1EE6EC1CF888B500ABC6A6 /* GradView.swift */; };
 		FC2677A91CF74D3600EB7E9D /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2677A81CF74D3600EB7E9D /* MainWindowController.swift */; };
@@ -48,8 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FC1740671D168C2C0016B1B3 /* XEasyMotionUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XEasyMotionUITests.swift; sourceTree = "<group>"; };
-		FC1740691D168CB10016B1B3 /* XEasyMotionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XEasyMotionTests.swift; sourceTree = "<group>"; };
 		FC1BB5631D1996B300539FF0 /* NineBlockMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NineBlockMode.swift; sourceTree = "<group>"; };
 		FC1EE6EC1CF888B500ABC6A6 /* GradView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradView.swift; sourceTree = "<group>"; };
 		FC2677A81CF74D3600EB7E9D /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
@@ -71,9 +67,7 @@
 		FCDCFB0D1CF6DA36009ABCEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCDCFB0F1CF6DA36009ABCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCDCFB141CF6DA36009ABCEB /* XEasyMotion.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XEasyMotion.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCDCFB1A1CF6DA36009ABCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCDCFB1F1CF6DA36009ABCEB /* XEasyMotion.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XEasyMotion.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCDCFB251CF6DA36009ABCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCFD066F1D028C810005D284 /* ConolePlay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ConolePlay.playground; sourceTree = "<group>"; };
 		FCFD06741D02FB8F0005D284 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
 		FCFD06761D0302A40005D284 /* AboutViewControoler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewControoler.swift; sourceTree = "<group>"; };
@@ -118,8 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				FCDCFB051CF6DA36009ABCEB /* XEasyMotion */,
-				FCDCFB171CF6DA36009ABCEB /* XEasyMotionTests */,
-				FCDCFB221CF6DA36009ABCEB /* XEasyMotionUITests */,
 				FCDCFB041CF6DA36009ABCEB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -159,25 +151,6 @@
 				FCA7F3FB1D16303300BCE328 /* Config.swift */,
 			);
 			path = XEasyMotion;
-			sourceTree = "<group>";
-		};
-		FCDCFB171CF6DA36009ABCEB /* XEasyMotionTests */ = {
-			isa = PBXGroup;
-			children = (
-				FC1740691D168CB10016B1B3 /* XEasyMotionTests.swift */,
-				FCDCFB1A1CF6DA36009ABCEB /* Info.plist */,
-			);
-			name = XEasyMotionTests;
-			path = XEasyMotioinTests;
-			sourceTree = "<group>";
-		};
-		FCDCFB221CF6DA36009ABCEB /* XEasyMotionUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FC1740671D168C2C0016B1B3 /* XEasyMotionUITests.swift */,
-				FCDCFB251CF6DA36009ABCEB /* Info.plist */,
-			);
-			path = XEasyMotionUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,7 +217,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = h2ero;
 				TargetAttributes = {
 					FCDCFB021CF6DA36009ABCEB = {
@@ -358,8 +331,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC17406A1D168CB10016B1B3 /* XEasyMotionTests.swift in Sources */,
-				FC1740681D168C2C0016B1B3 /* XEasyMotionUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,13 +370,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -444,13 +423,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -469,6 +456,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};

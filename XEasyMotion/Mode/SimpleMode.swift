@@ -9,6 +9,15 @@
 import Foundation
 import Carbon
 
+// key bindings:
+//   c
+//  htn
+//
+// u - click
+// e - right click
+// o - undo
+// m - escape
+
 class SimpleMode : Mode{
     
     static func load(){
@@ -34,19 +43,19 @@ class SimpleMode : Mode{
     }
     
     override static func addMoveKeyBind()  {
-        for (_, keyCode) in Constents.moveKeyCode {
+        // for (_, keyCode) in Constents.moveKeyCode {
 //            Log.write(Log.INFO, catelog: "register key code", value: keyCode)
-            HotKeys.register(keycode: UInt32(keyCode), modifiers: UInt32(shiftKey), block:{
-                (id:EventHotKeyID) in
+            // HotKeys.register(keycode: UInt32(keyCode), modifiers: UInt32(shiftKey), block:{
+                // (id:EventHotKeyID) in
 //                Log.write(errLevel: Log.INFO, catelog: "move", value: String(id.id) as AnyObject)
-                self.moveWindow(dirction: Int(id.id))
-            })
-        }
+                // self.moveWindow(dirction: Int(id.id))
+            // })
+        // }
         
     }
     
     override static func addClickBind()  {
-        HotKeys.register(keycode: UInt32(kVK_Return), modifiers: UInt32(activeFlag), block:{_ in
+        HotKeys.register(keycode: UInt32(kVK_ANSI_F), modifiers: UInt32(activeFlag), block:{_ in
            
             DispatchQueue.global().async {
                 let (x,y) = self.getWinCenterPoint()
@@ -59,7 +68,7 @@ class SimpleMode : Mode{
             
         });
         
-        HotKeys.register(keycode: UInt32(kVK_Return), modifiers: UInt32(shiftKey), block:{_ in
+        HotKeys.register(keycode: UInt32(kVK_ANSI_D), modifiers: UInt32(activeFlag), block:{_ in
             DispatchQueue.global().async {
                 let (x,y) = self.getWinCenterPoint()
                 self.hideWindow()
@@ -81,11 +90,13 @@ class SimpleMode : Mode{
 //            Log.write(errLevel: Log.INFO, catelog: "remove move key", value: String(UInt32(keyCode + shiftKey)))
             HotKeys.unregister(id: UInt32(keyCode + shiftKey))
         }
-        
-        HotKeys.unregister(id: UInt32(kVK_Return + activeFlag))
-        HotKeys.unregister(id: UInt32(kVK_Return + shiftKey))
-        HotKeys.unregister(id: UInt32(kVK_Escape + activeFlag))
+
+        HotKeys.unregister(id: UInt32(kVK_ANSI_F + activeFlag))
+        HotKeys.unregister(id: UInt32(kVK_ANSI_D + activeFlag))
+        HotKeys.unregister(id: UInt32(kVK_ANSI_O + activeFlag))
+        HotKeys.unregister(id: UInt32(kVK_ANSI_E + activeFlag))
         HotKeys.unregister(id: UInt32(kVK_ANSI_U + activeFlag))
+        HotKeys.unregister(id: UInt32(kVK_ANSI_M + activeFlag))
     }
     static func draw(){
         GradView.drawHorizLine(frac: 0)
@@ -101,21 +112,39 @@ class SimpleMode : Mode{
         let windowFirst = Util.getWindowFirst()
         var windowFrame = windowFirst.frame
         
+        
+
         let hitChar = Constents.hintCharsKeyCodeMap[id - activeFlag]
+
         let oldWidth = windowFrame.size.width
         let oldHeight = windowFrame.size.height
         var newWidth = oldWidth
         var newHeight = oldHeight
-        if hitChar == "H" {
+        if hitChar == "J" {
+            // bottom, works!
             newWidth = oldWidth  * 0.5
+                            NSLog("J: " + hitChar!);
+
+
         } else if hitChar == "L" {
             newWidth = oldWidth  * 0.5
             windowFrame.origin.x += newWidth
+                            NSLog("I: " + hitChar!);
+
+
         } else if hitChar == "K" {
             newHeight = oldHeight  * 0.5
-            windowFrame.origin.y += newHeight
-        } else {
+                            NSLog("L : " + hitChar!);
+
+
+        } else { // key code I
+            // top
             newHeight = oldHeight  * 0.5
+            windowFrame.origin.y += newHeight
+                            NSLog("ELSE: " + hitChar!);
+
+
+
         }
         windowFrame.size = NSMakeSize(newWidth, newHeight)
         windowFirst.setFrame(windowFrame,display: true,animate: Constents.animation)

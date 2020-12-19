@@ -32,14 +32,16 @@ class Mode {
     class func addMoveKeyBind(){}
     
     static func addRestoreKeyBind() {
-        HotKeys.register(keycode: UInt32(kVK_ANSI_U), modifiers: UInt32(activeFlag), block:{
+        // original was U, this is undo
+        HotKeys.register(keycode: UInt32(kVK_ANSI_S), modifiers: UInt32(activeFlag), block:{
             (id:EventHotKeyID) in
             self.restoreWindow()
         })
     }
     
     static func addCancelKeyBind() {
-        HotKeys.register(keycode: UInt32(kVK_Escape), modifiers: UInt32(activeFlag), block:{
+        // original was escape
+        HotKeys.register(keycode: UInt32(kVK_ANSI_M), modifiers: UInt32(activeFlag), block:{
             (id:EventHotKeyID) in
             NSLog("cancel")
 
