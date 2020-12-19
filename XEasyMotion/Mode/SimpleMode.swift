@@ -97,6 +97,7 @@ class SimpleMode : Mode{
         HotKeys.unregister(id: UInt32(kVK_ANSI_E + activeFlag))
         HotKeys.unregister(id: UInt32(kVK_ANSI_U + activeFlag))
         HotKeys.unregister(id: UInt32(kVK_ANSI_M + activeFlag))
+        HotKeys.unregister(id: UInt32(kVK_ANSI_S + activeFlag))
     }
     static func draw(){
         GradView.drawHorizLine(frac: 0)
@@ -121,30 +122,18 @@ class SimpleMode : Mode{
         var newWidth = oldWidth
         var newHeight = oldHeight
         if hitChar == "J" {
-            // bottom, works!
             newWidth = oldWidth  * 0.5
-                            NSLog("J: " + hitChar!);
-
 
         } else if hitChar == "L" {
             newWidth = oldWidth  * 0.5
             windowFrame.origin.x += newWidth
-                            NSLog("I: " + hitChar!);
-
 
         } else if hitChar == "K" {
             newHeight = oldHeight  * 0.5
-                            NSLog("L : " + hitChar!);
-
 
         } else { // key code I
-            // top
             newHeight = oldHeight  * 0.5
             windowFrame.origin.y += newHeight
-                            NSLog("ELSE: " + hitChar!);
-
-
-
         }
         windowFrame.size = NSMakeSize(newWidth, newHeight)
         windowFirst.setFrame(windowFrame,display: true,animate: Constents.animation)
