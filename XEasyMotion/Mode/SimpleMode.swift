@@ -80,7 +80,7 @@ class SimpleMode : Mode{
             
         });
     }
-    static func removeKeyBind(){
+    override static func removeKeyBind(){
         for (keyCode, _) in Constents.hintCharsKeyCodeMap{
             HotKeys.unregister(id: UInt32(keyCode + activeFlag))
         }

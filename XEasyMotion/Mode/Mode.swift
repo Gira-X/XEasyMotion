@@ -31,6 +31,7 @@ class Mode {
     class func addHitKeyBind() {}
     class func addClickBind() {}
     class func addMoveKeyBind(){}
+    class func removeKeyBind(){}
     
     static func addRestoreKeyBind() {
         // original was U, this is undo
@@ -47,7 +48,7 @@ class Mode {
             NSLog("cancel")
 
             self.hideWindow()
-//            Keybind.removeKeyBind();
+            self.removeKeyBind()
         })
     }
       static func maxWindow() {
