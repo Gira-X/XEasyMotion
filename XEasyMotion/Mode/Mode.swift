@@ -16,7 +16,8 @@ class Mode {
     
     static func addActiveKeyBind()  {
         NSLog("add active Key bind")
-        HotKeys.register(keycode: UInt32(kVK_ANSI_I), modifiers: UInt32(cmdKey), block:{_ in
+        // this is key F on dvorak
+        HotKeys.register(keycode: UInt32(kVK_ANSI_F), modifiers: UInt32(cmdKey), block:{_ in
             self.postionStack = []
             self.maxWindow()
             self.addHitKeyBind()
